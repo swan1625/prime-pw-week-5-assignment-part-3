@@ -14,4 +14,13 @@ console.log( 'Adding to collection:', addToCollection( 'Digital Ash In a Digital
 console.log( 'Adding to collection:', addToCollection( 'Shame, Shame, ', 'Dr. Dog,', ' 2010' ));
 console.log( 'Adding to collection:', addToCollection( 'Strange Mercy,', ' St. Vincent,', ' 2011' ));
 console.log( 'Adding to collection:', addToCollection( 'Rocket,', ' Alex G,', ' 2017' ));
+
+
+
 console.log(collection);
+
+function showCollection(array) {
+  console.log(array)
+}
+
+console.log(showCollection(collection));

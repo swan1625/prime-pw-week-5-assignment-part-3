@@ -27,11 +27,11 @@ console.log(collection); //showing new collection with recently added artists
 function showCollection(array) {
   console.log('there are', array.length, 'albums in my collection');
   for (let i of array) {
-  console.log(`${i.title} by ${i.artist} published in ${i.yearPublished}`);
+    console.log(`${i.title} by ${i.artist} published in ${i.yearPublished}`);
 
   }
 }
-console.log(showCollection(collection)); // showing my collection through showCollection function *Currently showing undefined
+showCollection(collection);  // showing my collection through showCollection function *Currently showing undefined
 
 function findByArtist(artist){ //finding albums by artist through findByArtist function
   let artistArray =[];

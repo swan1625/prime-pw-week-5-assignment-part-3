@@ -3,7 +3,11 @@ console.log('***** Music Collection *****')
 let collection = [] // starting an empty array
 
 function addToCollection(title, artist, yearPublished){ //starting addToCollection function
- let a = title + artist + yearPublished;
+  let a = {
+    title: title,
+    artist: artist,
+    yearPublished: yearPublished
+  };
  collection.push(a)
  return a;
 } //end of addToCollection function
@@ -11,7 +15,7 @@ function addToCollection(title, artist, yearPublished){ //starting addToCollecti
 
 //adding 6 different albums to collection using our addToCollection function
 console.log( 'Adding to collection:', addToCollection( 'Are you Experienced?', 'Jimi Hendrix', '1967' ));
-console.log( 'Adding to collection:', addToCollection( 'Innerspeaker', 'Tame Impala', ' 2009' ));
+console.log( 'Adding to collection:', addToCollection( 'Innerspeaker', 'Jimi Hendrix', ' 2009' ));
 console.log( 'Adding to collection:', addToCollection( 'Digital Ash In a Digital Urn', 'Bright Eyes', '2005' ));
 console.log( 'Adding to collection:', addToCollection( 'Shame, Shame', 'Dr. Dog', '2010' ));
 console.log( 'Adding to collection:', addToCollection( 'Strange Mercy', 'St. Vincent', '2011' ));
@@ -29,7 +33,7 @@ function showCollection(array) {
 }
 console.log(showCollection(collection)); // showing my collection through showCollection function *Currently showing undefined
 
-function findByArtist(artist){
+function findByArtist(artist){ //finding albums by artist through findByArtist function
   let artistArray =[];
   for ( let i = 0; i<collection.length; i++){
     if (collection[i].artist === artist){
@@ -39,4 +43,6 @@ function findByArtist(artist){
   console.log(artistArray);
 }
 
-findByArtist('Jimi Hendrix'); //shows an empty array ?
+findByArtist('Jimi Hendrix'); // finding artist in our Collection
+
+findByArtist('Wavves'); // artist we do not have in our collection
